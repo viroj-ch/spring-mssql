@@ -1,1 +1,11 @@
-
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;
+    #url: jdbc:sqlserver://localhost:1433;databaseName=vcp_demo;
+    username: sa
+    password: yourStrong(!)Password

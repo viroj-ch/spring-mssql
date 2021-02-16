@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mssql-server:
+    image: mcr.microsoft.com/mssql/server:2017-CU12
+    ports:
+      - 1433:1433
+    container_name: vcp_mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=yourStrong(!)Password
+    volumes:
+      - mssql-data:/var/opt/mssql
+
+volumes:
+  mssql-data:
+
+# command to get in container and run sql to create database
+# docker exec -it vcp_mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'yourStrong(!)Password' -Q "CREATE DATABASE vcp_demo"
