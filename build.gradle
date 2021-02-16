@@ -28,6 +28,8 @@ dependencies {
     runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.testcontainers:testcontainers:1.14.3'
+    testImplementation 'org.testcontainers:mssqlserver:1.14.3'
 }
 
 test {
